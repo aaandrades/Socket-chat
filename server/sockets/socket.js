@@ -1,31 +1,25 @@
 const { io } = require("../server");
+const { TicketControl } = require("../classes/ticket-control");
+
+const ticketControl = new TicketControl();
 
 io.on("connection", (client) => {
-  console.log("User connected");
-
-  client.emit("welcomeMessage", {
-    message: "Hello from server",
+  client.on("nextTicket", (callback) => {
+    callback(ticketControl.next());
   });
 
-  // Detect disconnection
-  client.on("disconnect", () => {
-    console.log("Disconnected User");
+  client.emit("currentState", {
+    current: ticketControl.getCurrentState(),
+    lastFour: ticketControl.getLastTickets(),
   });
 
-  // Listen client information
-  client.on("sendMessage", (data, callback) => {
-    console.log(data);
-    // Emit information to everybody connected
-    client.broadcast.emit("welcomeMessage", data);
-    // if (message.user) {
-    //   callback({
-    //     message: "Everything good",
-    //   });
-    // } else {
-    //   callback({
-    //     message: "Everything bad :(",
-    //   });
-    // }
-    // // await new Promise((resolve) => setTimeout(resolve, 2000));
+  client.on("handleTicket", (data, callback) => {
+    if (!data.desktop) {
+      return callback({ error: true, message: "The desk has to be provided" });
+    }
+
+    let resolveTicket = ticketControl.handleTicket(data.desktop);
+    callback(resolveTicket);
+    client.broadcast.emit("updateTickets", resolveTicket);
   });
 });
