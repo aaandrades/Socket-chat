@@ -18,30 +18,12 @@ socket.on("disconnect", () => {
   console.log("Connection lost");
 });
 
-//   Send information to server
-// socket.emit(
-//   "sendMessage",
-//   {
-//     user: "Andres",
-//     message: "Hello World",
-//   },
-//   (response) => {
-//     console.log("Response: ", response);
-//   }
-// );
-
 socket.on("currentState", (state) => {
-  label.text(state.current)
-  console.log(state);
-});
-
-socket.on("welcomeMessage", (message) => {
-  console.log("Server message: ", message);
+  label.text(state.current);
 });
 
 $("button").on("click", () => {
   socket.emit("nextTicket", (data) => {
     label.text(data);
-    console.log("Next ticket is: ", data);
   });
 });

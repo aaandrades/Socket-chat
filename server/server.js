@@ -7,7 +7,6 @@ const http = require("http");
 const path = require("path");
 const app = express();
 
-console.log('init here')
 // Inject Express server into node Http
 let server = http.createServer(app);
 

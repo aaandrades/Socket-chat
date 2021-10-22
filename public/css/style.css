@@ -1,36 +1,117 @@
 html,
 body {
-    height: 100%;
-    width: 100%;
-    background-color: #6951F0;
-    color: white;
+  height: 100%;
+  width: 100%;
+  background-color: #6951f0;
+  color: white;
 }
 
 table {
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.body-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #41295a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #2f0743,
+    #41295a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #2f0743,
+    #41295a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0px 15px;
+}
+
+.card {
+  width: 100%;
+  max-width: 50%;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+.btn-success {
+  margin-top: 30px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.img-container {
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  margin: 5px;
+  cursor: pointer;
+  position: fixed;
+}
+
+.full-width {
+  margin: 30px 0px;
+  width: 100%;
+}
+
+.text-container {
+  margin-top: 20px;
+  text-align: start !important;
+}
+
+.btn-fullwidth {
+  width: 45%;
+}
+
+.btn-midwidth {
+  width: 100%;
 }
 
 .ticket-actual {
-    background-color: #282828;
+  background-color: #282828;
 }
 
 .ticket-actual-numero {
-    font-size: 80px;
+  font-size: 80px;
 }
 
 .ticket-actual-escritorio {
-    font-size: 45px;
+  font-size: 45px;
 }
 
 .ticket-secundario {
-    font-size: 25px;
+  font-size: 25px;
 }
-
 
 /* Nuevo-ticket */
 
 #lblNuevoTicket {
-    font-size: 70px;
+  font-size: 70px;
 }

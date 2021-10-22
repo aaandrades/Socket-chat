@@ -4,41 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Programa de Colas</title>
-
+    <title>Tails program</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body class="container">
-    <h1>Programa de Colas</h1>
-
-    <div class="row">
-      <div class="col-6">
-        <a class="btn btn-primary" href="publico.html">Pantalla publica</a>
-        <a class="btn btn-secondary" href="nuevo-ticket.html">Crear Tickets</a>
-      </div>
-
-      <div class="col-6">
-        <form action="escritorio.html">
-          <input
-            name="escritorio"
-            type="number"
-            class="form-control"
-            placeholder="Escritorio"
-            autofocus
-            required
-          />
-
-          <br />
-          <button type="submit" class="btn btn-primary">Ingresar</button>
-        </form>
+  <body class="body-container">
+    <div class="box">
+      <h1>Tickets management</h1>
+      <p>To see the utility of this program, you can open each screen in different tab <br> to see the sockets working.</p>
+      <div class="button-container">
+          <a class="btn btn-primary btn-fullwidth" href="publico.html">Public screen</a>
+          <a class="btn btn-secondary btn-fullwidth" href="nuevo-ticket.html">Create Ticket</a>
+        </div>
+          <form action="escritorio.html" class="full-width">
+            <input
+              name="escritorio"
+              type="number"
+              class="form-control"
+              placeholder="Desktop number"
+              autofocus
+              required
+            />
+            <br />
+            <button type="submit" class="btn btn-primary btn-midwidth">Enter desktop</button>
+          </form>
+          <button class="btn btn-info" id="show">Show information</button>
+          <div class="text-container" id="information">
+            <p><b>Public screen:</b> Screen when you can see the currents tickets.</p>  
+            <p><b>Create ticket:</b> Screen to create a new ticket.</p>  
+            <p><b>Enter desktop:</b> Enter a desktop and resolve tickets.</p>  
+            <p>1) Create a new ticket. 
+              <br> 2) Enter to desktop and resolve a ticket. 
+              <br> 3) Open public screen to see tickets.
+            </p>  
+          </div>
       </div>
     </div>
+    <script src="js/libs/jquery.min.js"></script>
     <script src="socket.io/socket.io.js"></script>
+    <script src="js/socket.index.js"></script>
   </body>
 </html>

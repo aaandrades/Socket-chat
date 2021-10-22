@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Nuevo Ticket</title>
+    <title>New Ticket</title>
 
     <link
       rel="stylesheet"
@@ -13,9 +13,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
   </head>
 
   <body>
+    <img src="./return.png" alt="return" class="img-container" onclick="window.history.back()"/>
     <table>
       <tr>
         <td>
@@ -24,13 +26,12 @@
       </tr>
       <tr>
         <td>
-          <button class="btn btn-secondary btn-lg">Generate new Ticket</button>
+          <button class="btn btn-dark btn-lg">Click to generate new Ticket</button>
         </td>
       </tr>
     </table>
     
     <script src="js/libs/jquery.min.js"></script>
-
     <script src="socket.io/socket.io.js"></script>
     <script src="js/socket.nuevo-ticket.js"></script>
   </body>

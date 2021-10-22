@@ -50,15 +50,10 @@ class TicketControl {
     this.tickets.shift();
 
     let resolveTicket = new Ticket(ticketNumber, desktop);
-    console.log(resolveTicket);
-    console.log(this.lastFour)
     this.lastFour.unshift(resolveTicket);
     if (this.lastFour.length > 4) {
       this.lastFour.splice(-1, 1);
     }
-
-    console.log("ULTIMOS 4");
-    console.log(this.lastFour);
     this.recordFile();
     return resolveTicket;
   };
@@ -78,7 +73,6 @@ class TicketControl {
     this.last = 0;
     this.tickets = [];
     this.lastFour = [];
-    console.log("Init system");
     this.recordFile();
   };
 }
