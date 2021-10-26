@@ -5,23 +5,30 @@
 ![Build](https://img.shields.io/badge/-Working-brightgreen)
 
 ### :memo: Description
-A brew description of the project that you're working on.
+The Tickets management is a real-time tickets delivery system focus on different scenarios such as Hospital, Law Firm, Odontology, Office of Driving license, Etc.
 
 ### :sparkles: Features
-Describe what features you include in the project.
-
+- Update in real time.
+- Save daily data (Similar to real tickets).
+- Makes sounds when the current ticket change.
+- Responsive design.
 ### :alembic: Core Concepts
-Explain what concepts you use like service, redux, patterns, etc.
 
+- Socket.io
+- Pipelines
+- Modal-pattern
 ### :construction: Made with
-What technologies you use to create the project.
+- Vanilla JS
+- Jquery
+- Socket.io
+- Html
+- Css
 
 ### :hammer: Demostration
-Put here the video or link to demo the App.
+Its a simple app, you can open here ```https://sockets-application.herokuapp.com/```
 
 ### :bulb: Run the App
-Explain if the app can run (Docker).
-```npm install``` and then ```npm run start```
+Clone repo and type ```npm install``` and then ```nodemon server/server``` or ```npm run start```
 
 *If you want to contribute to improve the project, please create your PR and write me :speech_balloon: . After it, sit down and take a beer, you deserve it!* :beers: .
 *This project is for academic purposes only, all right reserved. Andrés Andrade 2021 :copyright::registered:*
