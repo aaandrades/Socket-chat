@@ -11,12 +11,20 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
 
   <body class="body-container">
-    <div class="box">
+    <div class="box-top">
+      <iframe src="publico.html" class="frame-container-top"></iframe>
+    </div>
+    <div class="box-top">
+      <iframe src="nuevo-ticket.html" class="frame-container-bottom"></iframe>
+      <iframe src="escritorio.html?escritorio=2" id ="generate-desktop"class="frame-container-bottom"></iframe>
+    </div>
+    <div class="animate__bounceIn box">
       <h1>Tickets management</h1>
       <p>To see the utility of this program, you can open each screen in different tab <br> to see the sockets working.</p>
       <div class="button-container">

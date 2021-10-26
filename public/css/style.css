@@ -16,6 +16,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   background: #41295a; /* fallback for old browsers */
@@ -30,6 +31,52 @@ table {
     #41295a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.body-container-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(
+    to top,
+    #2f0743,
+    #41295a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #2f0743,
+    #41295a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.box-top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-container-top {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.frame-container-bottom {
+  width: 50%;
+  height: 100%;
+  height: 100%;
+  border: none;
+}
+
 .box {
   display: flex;
   align-items: center;
@@ -67,8 +114,8 @@ table {
 }
 
 .img-container {
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 48px;
   height: 48px;
   margin: 5px;

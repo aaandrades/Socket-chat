@@ -11,3 +11,6 @@ $("#show").on("click", () => {
     showInformation = true;
   }
 });
+
+document.getElementById("generate-desktop").src =
+  "escritorio.html?escritorio=" + Math.round(Math.random(4) * 10);
