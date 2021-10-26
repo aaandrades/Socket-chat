@@ -60,8 +60,8 @@ table {
   padding: 5px 10px;
   border-radius: 10px;
   background-color: black;
-  -webkit-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.71); 
-box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.71);
+  -webkit-box-shadow: 5px 5px 8px -1px rgba(0, 0, 0, 0.71);
+  box-shadow: 5px 5px 8px -1px rgba(0, 0, 0, 0.71);
 }
 
 .body-container-left {
@@ -211,4 +211,8 @@ box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.71);
 
 .modal-disclaimer {
   width: 90%;
+}
+
+.no-display {
+  display: none;
 }

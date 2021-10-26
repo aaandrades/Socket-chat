@@ -7,6 +7,9 @@ $("#information").hide();
 $("#modal").hide();
 $("#modal-disclaimer").hide();
 
+$("#modal").removeClass("no-display");
+$("#modal-disclaimer").removeClass("no-display");
+
 document.getElementById("generate-desktop").src =
   "escritorio.html?escritorio=" + Math.round(Math.random(4) * 10);
 
