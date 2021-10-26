@@ -13,46 +13,58 @@
     />
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
 
   <body class="body-container">
+    <img src="./conversation.png" alt="return" class="img-container" />
     <div class="box-top">
       <iframe src="publico.html" class="frame-container-top"></iframe>
     </div>
     <div class="box-top">
       <iframe src="nuevo-ticket.html" class="frame-container-bottom"></iframe>
-      <iframe src="escritorio.html?escritorio=2" id ="generate-desktop"class="frame-container-bottom"></iframe>
+      <iframe
+        src="escritorio.html?escritorio=2"
+        id="generate-desktop"
+        class="frame-container-bottom"
+      ></iframe>
     </div>
-    <div class="animate__bounceIn box">
-      <h1>Tickets management</h1>
-      <p>To see the utility of this program, you can open each screen in different tab <br> to see the sockets working.</p>
-      <div class="button-container">
-          <a class="btn btn-primary btn-fullwidth" href="publico.html">Public screen</a>
-          <a class="btn btn-secondary btn-fullwidth" href="nuevo-ticket.html">Create Ticket</a>
+    <div class="modal" id="modal">
+      <div class="modal-container animate__bounceIn">
+        <h1>Tickets management</h1>
+        <p class="center-text">
+          The Tickets management is a real-time tickets delivery system focus on
+          different scenarios such as Hospital, Law Firm, Odontology, Office of
+          Driving license, Etc.
+        </p>
+        <div class="text-container">
+          <b>Instructions</b>
+          <p>
+            1) Create a new ticket. <br />
+            2) Click on <b>solve next ticket</b><br />
+            3) See the changes in public screen (top).<br />
+          </p>
+          <p class="disclaimer">
+            Each screen is a different iframe, so it's similar like open each
+            one in different tabs.
+          </p>
+          <button class="btn btn-primary" id="close-modal">Understood</button>
         </div>
-          <form action="escritorio.html" class="full-width">
-            <input
-              name="escritorio"
-              type="number"
-              class="form-control"
-              placeholder="Desktop number"
-              autofocus
-              required
-            />
-            <br />
-            <button type="submit" class="btn btn-primary btn-midwidth">Enter desktop</button>
-          </form>
-          <button class="btn btn-info" id="show">Show information</button>
-          <div class="text-container" id="information">
-            <p><b>Public screen:</b> Screen when you can see the currents tickets.</p>  
-            <p><b>Create ticket:</b> Screen to create a new ticket.</p>  
-            <p><b>Enter desktop:</b> Enter a desktop and resolve tickets.</p>  
-            <p>1) Create a new ticket. 
-              <br> 2) Enter to desktop and resolve a ticket. 
-              <br> 3) Open public screen to see tickets.
-            </p>  
-          </div>
+      </div>
+    </div>
+    <div class="modal" id="modal-disclaimer">
+      <div class="modal-container modal-disclaimer animate__bounceIn">
+        <h1>Better experience</h1>
+        <p class="center-text">
+          The Tickets management it's an application design for web (Yes, i know
+          Mobile First), So, to improve your experience, please change to web.
+        </p>
+        <button class="btn btn-primary" id="close-modal-disclaimer">
+          Understood
+        </button>
       </div>
     </div>
     <script src="js/libs/jquery.min.js"></script>
