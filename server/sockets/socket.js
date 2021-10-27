@@ -4,7 +4,7 @@ const { TicketControl } = require("../classes/ticket-control");
 const ticketControl = new TicketControl();
 
 io.on("connection", (client) => {
-  client.on("nextTicket", (callback) => {
+  client.on("nextTicket", (_, callback) => {
     callback(ticketControl.next());
   });
 
@@ -20,6 +20,6 @@ io.on("connection", (client) => {
 
     let resolveTicket = ticketControl.handleTicket(data.desktop);
     callback(resolveTicket);
-    client.broadcast.emit("updateTickets", resolveTicket);
+    client.broadcast.emit("updateTickets", {lastFour: ticketControl.getLastTickets()});
   });
 });

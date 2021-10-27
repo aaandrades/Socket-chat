@@ -28,4 +28,5 @@ socket.on("currentState", (data) => {
 socket.on("updateTickets", (data) => {
   const audio = new Audio("audio/new-ticket.mp3");
   audio.play();
+  updateHtml(data.lastFour);
 });

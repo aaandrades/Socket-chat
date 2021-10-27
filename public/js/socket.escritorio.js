@@ -8,8 +8,7 @@ if (!searchParams.has("escritorio")) {
   throw new Error("The desktop have to be provided");
 }
 
-// const desktop = searchParams.get("escritorio");
-let desktop = Math.round(Math.random(4) * 10)
+let desktop = Math.floor(Math.random() * (10) + 1);
 
 $("h1").text("Desktop " + desktop);
 let label = $("span");
@@ -23,6 +22,6 @@ $("button").on("click", () => {
       alert("There are no tickets");
     }
     label.text(response.id);
-    desktop = Math.round(Math.random(4) * 10);
+    desktop = Math.floor(Math.random() * (10) + 1);
   });
 });

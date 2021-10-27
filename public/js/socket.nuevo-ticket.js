@@ -23,7 +23,7 @@ socket.on("currentState", (state) => {
 });
 
 $("button").on("click", () => {
-  socket.emit("nextTicket", (data) => {
+  socket.emit("nextTicket", null, (data) => {
     label.text(data);
   });
 });
