@@ -7,6 +7,8 @@
 ### :memo: Description
 The Tickets management is a real-time tickets delivery system focus on different scenarios such as Hospital, Law Firm, Odontology, Office of Driving license, Etc.
 
+<img src="server/documentation/main.png"  alt="Login screen" width="600" height="400" style=border-radius:6px>
+
 ### :sparkles: Features
 - Update in real time.
 - Save daily data (Similar to real tickets).
@@ -25,7 +27,7 @@ The Tickets management is a real-time tickets delivery system focus on different
 - Css
 
 ### :hammer: Demostration
-Its a simple app, you can open here ```https://sockets-application.herokuapp.com/```
+Its a simple app, you can open here https://sockets-application.herokuapp.com/
 
 ### :bulb: Run the App
 Clone repo and type ```npm install``` and then ```nodemon server/server``` or ```npm run start```
